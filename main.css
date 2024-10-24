@@ -1,0 +1,129 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+.btn {
+    padding: 15px 30px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #cf6d17;
+}
+
+header {
+    background-color: #d35400;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow nav items to wrap */
+    text-align: right;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px; /* Adjust margin for smaller screens */
+    text-decoration: none;
+    font-weight: 400;
+    text-align: right;
+}
+
+#hero {
+    background-image: url('image.jpg'); /* Assicurati di avere un'immagine di sfondo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.content-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.menu-item {
+    margin: 10px;
+    perspective: 1000px; /* Necessario per l'effetto di rotazione */
+}
+
+.card {
+    width: 200px; /* Imposta la larghezza desiderata */
+    height: 300px; /* Imposta l'altezza desiderata */
+    position: relative;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px; /* Aggiunge un bordo arrotondato */
+}
+
+.card-front img {
+    width: 100%; /* Larghezza dell'immagine al 100% della card */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    border-radius: 10px 10px 0 0; /* Bordo arrotondato solo in alto */
+}
+
+.card-back {
+    background: orange; /* Colore di sfondo per la parte posteriore */
+    color: white; /* Colore del testo sulla parte posteriore */
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-inner.flipped {
+    transform: rotateY(180deg); /* Ruota la card */
+}
+
+footer {
+    background-color: #d35400;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
